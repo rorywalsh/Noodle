@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Slab:400,600');
+
+      .remark-container {
+      background-color: #ffffff;
+      }
+      .remark-slide-content {
+      background-color: #14263b;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: table-cell;
+      /* font-size: 20px; */
+      padding: 1em 4em 1em 4em;
+
+
+
+      h1, h2, h3, h4 {
+        margin: 0 0 20px 0;
+        color: #1a9c00;
+        font-size: 10px;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        /* line-height: 1.2; */
+        letter-spacing: normal;
+        text-shadow: none;
+        text-align: center;
+        word-wrap: break-word;
+      }
+
+      h3, h4 {
+        color: #1a9c00;
+      }
+      
+
+      .left {
+        display: block;
+        text-align: left;
+      }
+
+      .center {
+        display: block;
+        text-align: center;
+      }
+
+      .right {
+        display: block;
+        text-align: right;
+      }
+    }
+
+      .yellow{
+        color: #ffff00;
+      }
+      .green{
+        color: #02c702;
+      }
+      body { 
+        line-height: 1.3;
+        font-size: 0.65em;
+        font-family: monospace;
+        /* font-family: 'Josefin Slab', serif; */
+        text-align: left;
+        color: #f8f8f8;
+        background: #002b36;
+        background-color: #002b36;
+      }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .remark-container.remark-presenter-mode .remark-slides-area {
+        width: 60%;
+        height: 100%;
+        top: 0;
+        left: 0.5%;
+      }
+      .remark-container.remark-presenter-mode .remark-preview-area {
+        width: 40%;
+        height: 40%;
+        top: 60%;
+        left: 61%;
+        color: #fff;
+        -webkit-transform: scale(0.66);
+        -webkit-transform-origin: top left;
+      }
+      .remark-container.remark-presenter-mode .remark-notes-area {
+        left: 61%;
+        font-size: 1.65em;
+        top: 0%;
+        height: 60%; 
+      }
+
+      /* blockquote::before {
+        content: open-quote;
+        margin-right: 5px;
+        font-size: 1.2em;
+     } */
+     
+     blockquote {
+       border-left: 0.1em solid rgb(1, 172, 10);
+       padding: 0 15px;
+       font-style: italic;
+       color: rgb(100, 167, 181);
+     }
+
+     blockquote.key {
+      border-left: 0.3em solid rgb(255, 255, 255);
+      padding: 0 15px;
+      font-style: italic;
+      color: rgb(100, 167, 181);
+    }
+     
+     /* blockquote::after {
+       content: close-quote;
+       margin-left: 5px;
+       font-size: 1.2em;
+     } */
+
+
+      pre {
+        border-radius: 5px;
+        background: #4d4d4d;
+        padding: 0px;
+        padding-left: 0px; 
+        padding-top: 0px;
+      }
+      code {
+        padding: 0px;
+
+        color: rgb(230, 230, 230);
+      }
+
+      a {
+        color: rgb(252, 227, 0);
+      }

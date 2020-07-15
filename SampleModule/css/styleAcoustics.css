@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Slab:400,600');
+
+      .remark-container {
+      background-color: #b4b4b4;
+      }
+      .remark-slide-content {
+      background-color: #002b36;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: table-cell;
+      /* font-size: 20px; */
+      padding: 1em 4em 1em 4em;
+
+      h1, h2 {
+        margin: 0 0 20px 0;
+        color: #eee8d5;
+        font-size: 10px;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        /* line-height: 1.2; */
+        letter-spacing: normal;
+        text-shadow: none;
+        text-align: center;
+        word-wrap: break-word;
+      }
+      
+      .left {
+        display: block;
+        text-align: left;
+      }
+      
+      .center {
+        display: block;
+        text-align: center;
+      }
+
+      .right {
+        display: block;
+        text-align: right;
+      }
+    }
+
+      .yellow{
+        color: #ffff00;
+      }
+      .green{
+        color: #008800;
+      }
+      .blue{
+        color: rgb(54, 158, 179);;
+      }
+      .dark{
+        color: rgb(0,0,0);;
+      }
+
+      .code { 
+        line-height: 1.3;
+        font-family: 'Courier New', Courier, monospace;
+        /* font-family: 'Josefin Slab', serif; */
+        text-align: left;
+        font-weight: bold;
+        color: #242424;
+        background: #ffffff;
+        background-color: #ffffff;
+      }
+      
+      body { 
+        line-height: 1.3;
+        font-size: 0.65em;
+        font-family: monospace;
+        /* font-family: 'Josefin Slab', serif; */
+        text-align: left;
+        color: #ffffff;
+        background: #002b36;
+        background-color: #002b36;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+      th, td {
+          padding: 5px;
+          border: 1px solid rgb(0, 0, 0);
+      }
+      
+      .remark-code, .remark-inline-code { 
+        font-family: 'Ubuntu Mono'; 
+      }
+
+      .remark-container.remark-presenter-mode .remark-slides-area {
+        width: 60%;
+        height: 100%;
+        top: 0;
+        left: 0.5%;
+      }
+      .remark-container.remark-presenter-mode .remark-preview-area {
+        width: 40%;
+        height: 40%;
+        top: 60%;
+        left: 61%;
+        color: #fff;
+        -webkit-transform: scale(0.66);
+        -webkit-transform-origin: top left;
+      }
+      .remark-container.remark-presenter-mode .remark-notes-area {
+        left: 61%;
+        font-size: 1.65em;
+        top: 0%;
+        height: 60%; 
+      }
+
+            /* blockquote::before {
+        content: open-quote;
+        margin-right: 5px;
+        font-size: 1.2em;
+     } */
+     
+     blockquote {
+      border-left: 0.3em solid #ccc;
+      padding: 0 15px;
+      font-style: italic;
+      color: rgb(54, 158, 179);
+    }
+    
+    /* blockquote::after {
+      content: close-quote;
+      margin-left: 5px;
+      font-size: 1.2em;
+    } */
+
+    a {
+      color: rgb(252, 227, 0);
+    }

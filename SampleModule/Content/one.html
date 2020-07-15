@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Moodle Noodle</title>
+
+    <link rel="stylesheet" href="../css/reveal.css">
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        
+        #csoundConsole {
+            font-family: Monospace;
+            color: #c4265f;
+            background-color: #262722;
+            font-size: 16px;
+        }
+        
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 80%;
+            height: 40%;
+            top: 20%;
+            left: 10%;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 200;
+            cursor: pointer;
+        }
+        
+        .button {
+            background-color: rgb(84, 84, 84);
+            border: none;
+            color: white;
+            /* padding: 15px 25px; */
+            text-align: center;
+            font-size: 12px;
+            cursor: pointer;
+            corners: 10px;
+        }
+        
+        .button:hover {
+            background-color: rgb(60, 60, 60);
+        }
+        
+        .button:focus {
+            outline: none;
+        }
+        
+        .reveal section pre code {
+            font-size: 1.7em !important;
+        }
+        
+        .reveal pre code {
+            padding: 10px;
+            overflow: auto;
+            line-height: 110%;
+            max-height: 400px;
+            word-wrap: normal;
+        }
+    </style>
+    </style>
+    <link rel="stylesheet" href="../css/theme/moon.css" id="theme">
+    <link rel="stylesheet" href="../lib/css/monokai.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="overlay">
+        <div id="editor" style="height:90%;width:100%;position:relative;"></div>
+        <div style="position:relative;padding:15px 15px 15px 15px;">
+            <button id="csoundButton" class="button" style="float:left;border-radius:10px;width:100px;height:30px">Run code</button>
+            <textarea class="console" style="margin-left:50px; float:left;padding-top:25px;padding:25px;width:70%;height:100px" id="csoundConsole">
+					Csound: not loaded</textarea>
+        </div>
+    </div>
+
+    <div class="reveal">
+
+        <div class="slides">
+
+            <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
+            <section data-markdown="one.md" data-separator="^---$" data-separator-vertical="^--"></section>
+
+            <section data-markdown>
+                ### Recommended Reading: * Acoustics and psychoacoustics / David M. Howard and James Angus; Oxford ; Boston : Focal Press, 2001. * Musical Acoustics / Donald Hall; Brooks/Cole Publishing: California 1990 * Master Handbook of Acoustics / F. Alton Everest;
+                New York : McGraw-Hill, c2001. Computer Music. Dodge / C & Jerse, T; Schirmer Books, New York. 1998. * The computer music tutorial / Roads, Curtis; Cambridge, Mass. MIT Press 1996.
+            </section>
+        </div>
+    </div>
+    <script type="text/javascript" src="../csound/csound.js"></script>
+    <script src="../ace-editor/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/reveal.js"></script>
+    <!-- <script src="../js/katext-min.js"></script> -->
+
+    <script>
+        let isLoaded = false;
+
+        let audioDirectory = "media";
+
+        function addFiles(files) {
+            for (var i = 0; i < files.length; i++) {
+                csound.CopyUrlToLocal(audioDirectory + '/' + files[i], files[i], function() {
+                    console.log("Adding file: " + files[i]);
+                });
+            }
+            console.log(files);
+        }
+
+        function moduleDidLoad() {
+            addFiles(new Array("pianoMood.wav", "DutchLadyTalking.ogg"));
+            //start playback of sounds   
+            csound.PlayCsd("CsoundInstruments.csd");
+            isLoaded = true;
+            setTimeout(function() {
+                load();
+            }, 500)
+        }
+
+
+        function stripHTML(html) {
+            var tmp = document.createElement("DIV");
+            tmp.innerHTML = html;
+            return tmp.textContent || tmp.innerText;
+        }
+
+
+        var count = 0;
+
+        function handleMessage(message) {
+            var element = document.getElementById('csoundConsole');
+            element.value += message;
+            element.scrollTop = 99999; // focus on bottom
+            count += 1;
+            if (count == 1000) {
+                element.value = ' ';
+                count = 0;
+            }
+        }
+
+        function load() {
+
+            var el = document.getElementById("editor");
+            const text = '';
+            var editor = ace.edit(el);
+            editor.session.setValue(text);
+            editor.setFontSize(18)
+            editor.setBehavioursEnabled(false);
+            editor.setTheme("ace/theme/monokai");
+            editor.setOption("showPrintMargin", false)
+            editor.getSession().setMode("ace/mode/csound_orchestra");
+
+
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                mouseWheel: true,
+                viewDistance: 1,
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [{
+                    src: '../plugin/highlight/highlight.js',
+                    async: true
+                }, {
+                    src: '../plugin/notes/notes.js',
+                    async: true
+                }, {
+                    src: '../plugin/math-katex/math-katex.js',
+                    async: true
+                }, {
+                    src: '../plugin/markdown/marked.js',
+                    condition: function() {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                }, {
+                    src: '../plugin/markdown/markdown.js',
+                    condition: function() {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                }, ]
+            });
+
+
+            Reveal.addEventListener("slidechanged", function(event) {
+                document.getElementById("overlay").style.display = "none";
+
+                if (event.currentSlide.dataset.state == "audioSlide") {
+                    csound.ReadScore('i"PLAY_FILE" 0 1 "' + event.currentSlide.id + '"');
+                };
+
+                console.log(event.currentSlide.dataset.state);
+
+                if (document.getElementById(event.currentSlide.dataset.state)) {
+                    if (event.currentSlide.dataset.state == "editor") {
+                        console.log(stripHTML(event.currentSlide.innerHTML));
+                        editor.getSession().setValue(stripHTML(event.currentSlide.innerHTML));
+                        document.getElementById("overlay").style.display = "block";
+                    }
+                }
+
+                document.getElementById("csoundConsole").value = "Csound output will display here...\n\n";
+            });
+
+            let on = false;
+
+            var isPlaying = false;
+
+            document.getElementById("csoundButton").addEventListener("click", function(event) {
+                csound.CompileOrc(editor.getSession().getValue());
+                // 	var elem = document.getElementById("csoundButton");
+                // 	if(isPlaying == false)
+                // 	{
+                // 		csound.CompileOrc(editor.getSession().getValue());
+                // 		isPlaying = true;			
+                // 		elem.innerHTML  = "Stop";
+                // 	}
+                // 	else{
+                // 		csound.PlayCsd("PropertiesOfSound.csd"); 
+                // 		isPlaying = false;
+                // 		csound.Stop();
+                // 		elem.innerHTML  = "Run Code";
+                // 	}
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>
