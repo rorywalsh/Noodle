@@ -43,7 +43,7 @@ Be sure to download an install Visual Studio Code, not Visual Studio!</blockquot
 The Live Server extension will <font color="orange">*serve*</font> your content in a browser so you can see how it looks. 
 
 <blockquote style="color:#ff4">
-VS Code has hundreds of useful extensions. You might also wish to install a spell checker!</blockquote>
+VS Code has hundreds of useful extensions. You might also wish to install a sepll cehcker!</blockquote>
 <!-- .element: class="fragment" -->
 
 ---
