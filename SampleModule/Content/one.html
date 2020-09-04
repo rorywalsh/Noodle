@@ -93,10 +93,6 @@
             <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
             <section data-markdown="one.md" data-separator="^---$" data-separator-vertical="^--"></section>
 
-            <section data-markdown>
-                ### Recommended Reading: * Acoustics and psychoacoustics / David M. Howard and James Angus; Oxford ; Boston : Focal Press, 2001. * Musical Acoustics / Donald Hall; Brooks/Cole Publishing: California 1990 * Master Handbook of Acoustics / F. Alton Everest;
-                New York : McGraw-Hill, c2001. Computer Music. Dodge / C & Jerse, T; Schirmer Books, New York. 1998. * The computer music tutorial / Roads, Curtis; Cambridge, Mass. MIT Press 1996.
-            </section>
         </div>
     </div>
     <script type="text/javascript" src="../csound/csound.js"></script>
@@ -119,7 +115,7 @@
         }
 
         function moduleDidLoad() {
-            addFiles(new Array("pianoMood.wav", "DutchLadyTalking.ogg"));
+            addFiles(new Array());
             //start playback of sounds   
             csound.PlayCsd("CsoundInstruments.csd");
             isLoaded = true;

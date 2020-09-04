@@ -1,5 +1,5 @@
 {
-    "Snippet": {
+    "break_rule": {
         "prefix": "break_rule",
         "body": [
             "--",
@@ -7,9 +7,8 @@
             "___",
             ""
         ],
-        "description": "Your snippet description here."
     },
-    "Snippet1": {
+    "break_no_rule": {
         "prefix": "break_no_rule",
         "body": [
             "--",
@@ -20,49 +19,21 @@
         ],
         "description": "Your snippet description here."
     },
-    "Snippet2": {
-        "prefix": "yellow",
-        "body": [
-            ".yellow[$CLIPBOARD]"
-        ],
-        "description": "Your snippet description here."
-    },
-    "Snippet3": {
+    "sketch": {
         "prefix": "sketch",
         "body": [
             "<iframe src=\"./sketches/?/index.html\" width=\"?px\" height=\"?px\" style=\"float:center\" frameBorder=\"0\" scrolling=\"no\" ></iframe>"
         ],
         "description": "Your snippet description here."
     },
-    "Snippet4": {
+    "superscript": {
         "prefix": "superscript",
         "body": [
             "<sup></sup>"
         ],
         "description": "Your snippet description here."
     },
-    "Snippet5": {
-        "prefix": "green",
-        "body": [
-            ".green[$CLIPBOARD]"
-        ],
-        "description": "Your snippet description here."
-    },
-    "Snippet6": {
-        "prefix": "blue",
-        "body": [
-            ".blue[$CLIPBOARD]"
-        ],
-        "description": "Your snippet description here."
-    },
-    "Snippet7": {
-        "prefix": "green_note",
-        "body": [
-            ">.green[**Note:**]"
-        ],
-        "description": "Your snippet description here."
-    },
-    "Snippet8": {
+    "flowChart": {
         "prefix": "flowChart",
         "body": [
             "<div style=\"width:25%; float: left\"><img src=\"./imgs/basicOscil.svg\"/></div>",
@@ -73,7 +44,7 @@
         ],
         "description": "Your snippet description here."
     },
-    "Snippet9": {
+    "csound": {
         "prefix": "csound",
         "body": [
             "<!--CSOUND_PLAY_EXAMPLE",
@@ -82,14 +53,14 @@
         ],
         "description": "Your snippet description here."
     },
-    "Snippet10": {
+    "image": {
         "prefix": "image",
         "body": [
             "<img src=\"imgs/$CLIPBOARD\" style=\"width:70%\" />"
         ],
         "description": "Your snippet description here."
     },
-    "Snippet11": {
+    "soundImage": {
         "prefix": "soundImage",
         "body": [
             "<div style=\"width: 100%; overflow: hidden;\">",
@@ -103,8 +74,16 @@
         ],
         "description": "Your snippet description here."
     },
-
-    "Snippet12": {
+    "sound": {
+        "prefix": "sound",
+        "body": [
+            "<audio controls style=\"outline:none;\">",
+            "<source src=\"imgs/$CLIPBOARD\" type=\"audio/mpeg\">",
+            "</audio>"       
+        ],
+        "description": "Your snippet description here."
+    },    
+    "imageColumn": {
         "prefix": "imageColumn",
         "body": [
             "<div style=\"width: 100%; overflow: hidden;\">",
@@ -117,7 +96,7 @@
         "description": "Your snippet description here."
     },
     
-    "Snippet13": {
+    "soundColumn": {
         "prefix": "soundColumn",
         "body": [
             "<div style=\"width: 100%; overflow: hidden;\">",
@@ -134,42 +113,42 @@
         "description": "Your snippet description here."
     },
 
-    "Snippet14": {
+    "fragment": {
         "prefix": "fragment",
         "body": [
             "<!-- .element: class=\"fragment\" -->"         
         ],
         "description": "Create a Revealjs fragment"
     },
-    "Snippet15": {
+    "colour:yellow": {
         "prefix": "colour:yellow",
         "body": [
             "<font color=\"yellow\">$CLIPBOARD</font>"
         ],
         "description": "Your snippet description here."
     },   
-    "Snippet16": {
+    "colour:orange": {
         "prefix": "colour:orange",
         "body": [
             "<font color=\"orange\">$CLIPBOARD</font>"
         ],
         "description": "Your snippet description here."
     }, 
-    "Snippet17": {
+    "colour:green": {
         "prefix": "colour:green",
         "body": [
             "<font color=\"green\">$CLIPBOARD</font>"
         ],
         "description": "Your snippet description here."
     }, 
-    "Snippet18": {
+    "colour:blue": {
         "prefix": "colour:blue",
         "body": [
             "<font color=\"cornflowerblue\">$CLIPBOARD</font>"
         ],
         "description": "Your snippet description here."
     }, 
-    "Snippet19": {
+    "blockquote": {
         "prefix": "blockquote",
         "body": [
             "<blockquote style=\"color:#ff4\">",
@@ -177,7 +156,7 @@
         ],
         "description": "Your snippet description here."
     },    
-    "Snippet20": {
+    "section": {
         "prefix": "section",
         "body": [
             "<p>",
