@@ -12,7 +12,7 @@ The content is produces can quickly be embedded into any Moodle homepage.
 
 ---
 
-## Why not tick with MS Powerpoint or Pages? 
+## Why not stick with MS Powerpoint or Pages? 
 
 Moving from a GUI based system, such as Powerpoint, to a text based one can be challenging. The rewards to using a system like this is that you can embed any kind of content you wish, and are not stuck to proprietary formats. If you wish to discuss machine learning, you can just add a ML library and embed a live demo. If you are teaching audio synthsis you can turn your presentation into an audio synthesiser that students can play with. 
 
