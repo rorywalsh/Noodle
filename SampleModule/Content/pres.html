@@ -97,7 +97,7 @@
         <div class="slides">
 
             <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
-            <section data-markdown="###MD_FILE###" data-separator="^---$" data-separator-vertical="^--"></section>
+            <section data-markdown="pres.md" data-separator="^---$" data-separator-vertical="^--"></section>
 
         </div>
     </div>
@@ -121,7 +121,7 @@
         }
 
         function moduleDidLoad() {
-            addFiles(new Array(###SOUND_FILES###));
+            addFiles(new Array());
             //start playback of sounds   
             csound.PlayCsd("CsoundInstruments.csd");
             isLoaded = true;

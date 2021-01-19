@@ -59,13 +59,7 @@
         .reveal section pre code {
             font-size: 1.7em !important;
         }
-
-        .reveal section p {
-            display: inline-block;
-            font-size: 0.6em;
-            line-height: 1.2em;
-            vertical-align: top;
-        } 
+        
         .reveal pre code {
             padding: 10px;
             overflow: auto;
@@ -75,7 +69,7 @@
         }
     </style>
     </style>
-    <link rel="stylesheet" href="../css/theme/blood.css" id="theme">
+    <link rel="stylesheet" href="../css/theme/moon.css" id="theme">
     <link rel="stylesheet" href="../lib/css/monokai.css">
     <style>
 
@@ -97,7 +91,7 @@
         <div class="slides">
 
             <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
-            <section data-markdown="###MD_FILE###" data-separator="^---$" data-separator-vertical="^--"></section>
+            <section data-markdown="ContentTemplate.html" data-separator="^---$" data-separator-vertical="^--"></section>
 
         </div>
     </div>
@@ -121,7 +115,7 @@
         }
 
         function moduleDidLoad() {
-            addFiles(new Array(###SOUND_FILES###));
+            addFiles(new Array());
             //start playback of sounds   
             csound.PlayCsd("CsoundInstruments.csd");
             isLoaded = true;
