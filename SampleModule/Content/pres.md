@@ -56,7 +56,7 @@ All content is hosting as a website directly within the student's Moodle homepag
 
 ---
 
-The following is from <font color="orange">Properties of Sound</font> a first year module on the B.A. in Audio and Music Production.   
+The following is from <font color="orange">Sound Design</font>, a module on the Certificate in Sound Design for Interactive Application.   
 
 ---
 
@@ -85,29 +85,145 @@ The results are shown in the following graph.
 
 ---
 
-FFT
+The following is from <font color="orange">Properties of Sound</font>, a first year module on B.A. In Audio and Music Production.   
 
 ---
 
-Sample Sequencer
+#### <font color="#9c2131">Tell us more, this is really interesting...</font>
+
+Feast your eyes upon the Discrete Fourier Transform!! 
+
+$$X(k) = {{1}\over{N}} \sum_{t=1}^\{n-1} \cdot x(t) \cdot [ cos(2  \pi  k  ({{t}\over{SR}}) - j sin(2  \pi  k  ({{t}\over{SR}})]$$
+<!-- .element: class="fragment" -->
+
+<blockquote style="font-size:18px;color:#ddd;background-color:#111">
+where $x(t)$ is the time domain signal, $N$ is its size in samples, $x(k)$ is the output spectra, $t$ is the time index and k is the frequency sample index. $N$ in this case is referred to as the transform size. </blockquote>
+<!-- .element: class="fragment" -->
 
 ---
 
-Delay lines and allpass filters...
+#### <font color="#9c2131">What the text books fail to mention...</font>
+
+...is that the average of the product of two sine waves will be 0 if they don't have the same frequency.  
+<!-- .element: class="fragment" -->
 
 ---
 
-Sound Synthesis - Csound
+#### <font color="#9c2131">Check it!</font>
+
+Each time a mouse click is detected, this sketch will generate two random waveforms with frequencies between 1 and 5. The waveform on the right is the product(multiplication) of the these two waveforms
+
+<div class = "stretch">
+     <iframe width="100%" height="100%" frameBorder="0" data-src="https://editor.p5js.org/rorywalsh/embed/qifpJ74dS"></iframe>
+</div>
+
+Do you notice anything about the resulting waveforms when the two waves on the left have the same frequency?
 
 ---
 
-#### Where to start?
+#### <font color="#9c2131">And what about complex waveforms?</font>
 
-Starting visiting the Noodle repository where you will find a quick overview of how to get set up.   
-https://github.com/rorywalsh/Noodle
+<div class = "stretch">
+     <iframe width="100%" height="100%" frameBorder="0" data-src="https://editor.p5js.org/rorywalsh/embed/gM9KiQrlr"></iframe>
+</div>
 
-
-http://rorywalsh.githum.com/Noodle/SampleModule/Content/one.html
+This sketch shows a complex waveform with 10 harmonics. A slider can be used to change the frequency of the probe wave. 
 
 ---
 
+The following is taken from a lecture in <font color="orange">Creative Coding for interactive application</font> in the B.A. in Creative Media module.
+
+---
+
+#### <font color="cornflowerblue">Step Sequencer</font>
+
+<iframe height="400px" width="100%" src="https://editor.p5js.org/rorywalsh/sketches/9hSoVOQ8s"></iframe>
+
+---
+
+#### <font color="cornflowerblue">Oh shoot</font>
+
+What's a <font color="orange">*shoot'em'up*</font> without some shooting?!
+
+<div class = "stretch">
+     <iframe width="100%" height="100%" frameBorder="0" data-src="https://editor.p5js.org/rorywalsh/sketches/i-j3u4Gpr"></iframe>
+</div>
+
+---
+
+The following is from a <font color="cornflowerblue">Sound Synthesis</font> module in the old B.A in Music and Audio Production
+
+---
+
+#### <font color="#9c2131">Manipulating the audio stream</font> 
+
+Audio streams can be manipulated in two unique ways. The first and most common approach is the modify the sample data directly.  
+
+<div class = "stretch">
+   <iframe width="100%" height="100%" scrolling="no" frameBorder="0" data-src="https://editor.p5js.org/rorywalsh/embed/YP7THMBly"></iframe>
+</div>
+
+When audio is processed in this way, an algorithm is applied to a number of samples. This type of processing is known as time-domain processing.
+
+---
+
+#### <font color="#9c2131">Classic time domain processing</font>
+
+Almost all time-domain processes are based on the idea of mixing a delayed signal with its not delayed self. So let's start there, with the delay line. 
+
+<div class = "stretch">
+   <iframe width="100%" height="100%" scrolling="no" frameBorder="0" data-src="https://editor.p5js.org/rorywalsh/embed/H03cR32U5"></iframe>
+</div>
+
+---
+
+A wet mix gain is typically applied to the delayed output to control how much of the delayed signal is heard.
+
+<div class = "stretch">
+   <iframe width="100%" height="100%" scrolling="no" frameBorder="0" data-src="https://editor.p5js.org/rorywalsh/embed/Qsk4ejnHr"></iframe>
+</div>
+
+---
+
+#### <font color="#9c2131">Comb filters</font>
+
+A comb filter is a delay line with a <font color="orange">feedback loop</font>. 
+
+<div class = "stretch">
+   <iframe width="100%" height="100%" scrolling="no" frameBorder="0" data-src="https://editor.p5js.org/rorywalsh/embed/lYiwVBXTm"></iframe>
+</div>
+
+One must be careful with the gain of a comb filter as anything greater than 1 will cause the signal to get louder and louder on each iteration.
+<!-- .element: class="fragment" -->
+
+---
+
+<section style="left: -9999px;" data-state="editor">
+
+instr COMB_FILTER
+    a1, a2 diskin2 "DutchLadyTalking.ogg", 1, 0, 1       ;load sound file
+    aComb comb (a1+a2)/2, 5, .01                         ;add comb filter
+    outs aComb, aComb                                    ;output
+endin
+
+<p>
+schedule("COMB_FILTER", 0, 10)                           ;trigger instrument
+
+</section>
+
+---
+
+#### <font color="cornflowerblue"> Where to start?</font>
+
+Starting visiting the [https://github.com/rorywalsh/Noodle](https://github.com/rorywalsh/Noodle) repository where you will find a quick overview of how to get set up.   
+
+<div class = "stretch">
+     <iframe width="100%" height="100%" scrolling="no" frameBorder="0" data-src="https://rorywalsh.github.io/Noodle/SampleModule/Content/one.html#/
+"></iframe>
+</div>
+
+---
+
+<div class = "stretch">
+     <iframe width="100%" height="100%" scrolling="no" frameBorder="0" data-src="https://editor.p5js.org/rorywalsh/embed/8L_sXLDBU"></iframe>
+</div>
