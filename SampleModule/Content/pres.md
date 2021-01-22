@@ -98,7 +98,7 @@ The following is from <font color="orange">Properties of Sound</font>, a first y
 Feast your eyes upon the Discrete Fourier Transform!! 
 
 $$X(k) = {{1}\over{N}} \sum_{t=1}^\{n-1} \cdot x(t) \cdot [ cos(2  \pi  k  ({{t}\over{SR}}) - j sin(2  \pi  k  ({{t}\over{SR}})]$$
-<!-- .element: class="fragment" -->
+<!-- .element: class="fragment" -->  
 
 <blockquote style="font-size:18px;color:#ddd;background-color:#111">
 where $x(t)$ is the time domain signal, $N$ is its size in samples, $x(k)$ is the output spectra, $t$ is the time index and k is the frequency sample index. $N$ in this case is referred to as the transform size. </blockquote>
