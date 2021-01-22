@@ -97,7 +97,7 @@ The following is from <font color="orange">Properties of Sound</font>, a first y
 
 Feast your eyes upon the Discrete Fourier Transform!! 
 
-$$X(k) = {{1}\over{N}} \sum_{t=1}^\{n-1} \cdot x(t) \cdot [ cos(2  \pi  k  ({{t}\over{SR}}) - j sin(2  \pi  k  ({{t}\over{SR}})]$$
+$$X(k) = {{1} \over {N}} \sum_{t=1}^\{n-1} \cdot x(t) \cdot [ cos(2  \pi  k  ({{t}\over{SR}}) - j sin(2  \pi  k  ({{t}\over{SR}})]$$
 <!-- .element: class="fragment" -->  
 
 <blockquote style="font-size:18px;color:#ddd;background-color:#111">
