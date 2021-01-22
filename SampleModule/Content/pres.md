@@ -1,4 +1,7 @@
 
+
+---
+
 #### <font color="cornflowerblue">Taking the 'con' out of content</font>
 
 <img src="imgs/hereitcomes.gif" style="width:50%" />
@@ -11,19 +14,19 @@ Rory Walsh
 #### <font color="cornflowerblue">So what's the problem?</font>
 
 Notes:
-Proprietary software is a con
-Like most proprietary systems, it tends to lead you toward their way of doing things
-Things get extremely frustrating when you want to do something diferent. 
-Then there are the limited list of supported formats for a range of multi-media  
+* Proprietary software is a con!
+* Like most proprietary systems, it tends to lead you toward their way of doing things
+* Things get extremely frustrating when you want to do something different. 
+* Then there are the limited list of supported formats for a range of multi-media  
 
 ---
 
 #### <font color="cornflowerblue">Ok, and what's the solution?</font>
 
 Notes:
-The solution is to use free and open source framework
-Frameworks that compliment the open source content management system used in the school
-Frameworks that can open up new levels of interactivity in presentations
+* The solution is to use free and open source framework
+* Frameworks that compliment the open source content management system used in the school
+* Frameworks that can open up new levels of interactivity in presentations
 
 ---
 
@@ -40,6 +43,7 @@ Frameworks that can open up new levels of interactivity in presentations
 
 <font color="red">**Plotly**</font> A JS based version of the well known Python library for interactive graphing  
 <!-- .element: class="fragment" -->
+
 <font color="yellow">**Csound**</font> A web-based version of the popular audio programming language - for when WebAudio based libraries isn't up to the task...
 <!-- .element: class="fragment" -->
 
@@ -50,13 +54,13 @@ Frameworks that can open up new levels of interactivity in presentations
 Certainly. 
 
 Notes:
-The following are a selection of the slides from various modules I've thought in the past year or two. 
-All content is hosting as a website directly within the student's Moodle homepage where the students can interact directly with the content 
+* The following are a selection of the slides from various modules I've thought in the past year or two. 
+* All content is hosting as a website directly within the student's Moodle homepage where the students can interact directly with the content 
 
 
 ---
 
-The following is from <font color="orange">Sound Design</font>, a module on the Certificate in Sound Design for Interactive Application.   
+The following is from <font color="orange">Sound Design</font>, a module on the <font color="cornflowerblue">Certificate in Sound Design for Interactive Applications</font>.   
 
 ---
 
@@ -85,7 +89,7 @@ The results are shown in the following graph.
 
 ---
 
-The following is from <font color="orange">Properties of Sound</font>, a first year module on B.A. In Audio and Music Production.   
+The following is from <font color="orange">Properties of Sound</font>, a first year module on <font color="cornflowerblue">B.A. in Audio and Music Production</font>.   
 
 ---
 
@@ -131,17 +135,17 @@ This sketch shows a complex waveform with 10 harmonics. A slider can be used to 
 
 ---
 
-The following is taken from a lecture in <font color="orange">Creative Coding for interactive application</font> in the B.A. in Creative Media module.
+The following is taken from a lecture in <font color="orange">Creative Coding for interactive applications</font> in the <font color="cornflowerblue">B.A. in Creative Media</font> module.
 
 ---
 
-#### <font color="cornflowerblue">Step Sequencer</font>
+#### <font color="#9c2131">Step Sequencer</font>
 
 <iframe height="400px" width="100%" src="https://editor.p5js.org/rorywalsh/sketches/9hSoVOQ8s"></iframe>
 
 ---
 
-#### <font color="cornflowerblue">Oh shoot</font>
+#### <font color="#9c2131">Oh shoot</font>
 
 What's a <font color="orange">*shoot'em'up*</font> without some shooting?!
 
@@ -151,7 +155,7 @@ What's a <font color="orange">*shoot'em'up*</font> without some shooting?!
 
 ---
 
-The following is from a <font color="cornflowerblue">Sound Synthesis</font> module in the old B.A in Music and Audio Production
+The following is from a <font color="orange">Sound Synthesis</font> module in the old <font color="cornflowerblue">B.A in Music and Audio Production</font>
 
 ---
 
